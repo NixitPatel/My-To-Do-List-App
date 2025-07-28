@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+      integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="theme-btn">
+      <button class="theme-toggle"><i class="ri-moon-line"></i></button>
+      <button class="about-help"><i class="ri-question-line"></i></button>
+    </div>
+    <div class="top">
+      <div class="title">
+        <h1>TO DO LIST</h1>
+      </div>
+
+      <!-- input parts -->
+
+      <div class="data-handle-container">
+        <div class="task-counter">
+          <div class="progressbar"></div>
+          <div class="task-status">0/0</div>
+        </div>
+        <div class="add-task-container">
+          <h2>Add Tasks</h2>
+          <input
+            type="text"
+            class="inputs-1"
+            id="inputTitle"
+            placeholder="Enter Task Here"
+            autocomplete="off"
+          />
+          <input
+            type="text"
+            class="inputs-2"
+            id="inputDescription"
+            placeholder="Enter Task Description"
+            autocomplete="off"
+          />
+          <button type="button" class="add-btn">Add</button>
+        </div>
+        <div class="data-del-btn">
+          <button type="button" class="del-all-btn">Delete All</button>
+          <button type="button" class="del-all-done-btn">Delete Marked</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- task card container -->
+
+    <div class="task-container">
+      <!-- <div class="task-card">
+        <div class="card-btn">
+          <i class="ri-check-line"></i>
+          <div class="pin-unpin">
+            <i class="ri-pushpin-2-line"></i>
+            <i class="ri-unpin-line"></i>
+          </div>
+          <i class="ri-edit-line"></i>
+        </div>
+        <div class="done-card"></div>
+        <div class="card-title">Bringggff Fruits</div>
+        <div class="card-description">
+          <p>Lorem ipsum dolor sit amet.</p>
+          <div class="card-confirm-del">
+            <p>Are You Sure ?</p>
+            <div class="confirm-btn-container">
+              <button id="yes"><i class="ri-check-fill"></i></button>
+              <button id="no"><i class="ri-close-line"></i></button>
+            </div>
+          </div>
+        </div>
+      </div> -->
+    </div>
+
+    <div class="greeting-container">
+      <div class="greeting">
+        <h3>No tasks yet.</h3>
+        <h4>Add a task and mark it complete!</h4>
+      </div>
+    </div>
+
+    <!-- alert for delete confirmation -->
+    <div class="pop-bg">
+      <div class="alertpopup">
+        <p id="confirm-text">Confirm</p>
+        <div class="confirm-btn-container">
+          <button id="yes-all"><i class="ri-check-fill"></i></button>
+          <button id="no-all"><i class="ri-close-line"></i></button>
+        </div>
+      </div>
+    </div>
+
+    <!-- about-help -->
+    <div class="fullscreen-blur"></div>
+    <div class="help-about-container">
+      <div class="help-about-content">
+        <button class="close">
+          <i class="ri-close-circle-line"></i>
+        </button>
+        <div class="about">
+          <h2>HELLO</h2>
+          <h5>I am Nixit Patel</h5>
+        </div>
+        <br />
+        <div class="app-Overview">
+          <h3>App Overview</h3>
+          <p>
+            This task management app helps users stay organized by allowing them
+            to add, complete, edit, and delete tasks. It also supports
+            light/dark themes, progress tracking, and saves everything in the
+            browser's local storage.
+          </p>
+        </div>
+        <br />
+        <div class="guide">
+          <h3>Features Guide</h3>
+          <h5>Add Task:</h5>
+          <p>
+            Click the input, enter title & description, then click "Add Task" -
+            a colorful task card appears.
+          </p>
+
+          <h5>Random Color:</h5>
+          <p>
+            Each task has a random background color for a fun look and you can
+            also change color by clicking on task input.
+          </p>
+
+          <h5>Mark as Done:</h5>
+          <p>
+            Click the ✅ icon to mark a task as completed. Progress bar updates.
+          </p>
+
+          <h5>Edit Task:</h5>
+          <p>
+            Click ✏️ to edit a task. Only one task can be edited at a time. Save
+            to update.
+          </p>
+
+          <h5>Delete Task:</h5>
+          <p>
+            Click 🗑️ to delete. A confirmation appears before removing the task.
+          </p>
+
+          <h5>Theme Switch:</h5>
+          <p>
+            Click 🌙/☀️ icon to switch between dark and light mode. Your choice
+            is saved.
+          </p>
+
+          <h5>Progress Tracker:</h5>
+          <p>
+            Shows how many tasks are done out of total. Updates automatically.
+          </p>
+
+          <h5>Saved Data:</h5>
+          <p>
+            Everything is stored in your browser. You won’t lose tasks on
+            refresh.
+          </p>
+
+          <h5>Responsive Design:</h5>
+          <p>Works on all devices – mobile, tablet, desktop.</p>
+        </div>
+      </div>
+    </div>
+    <!-- congratulation-->
+    <!-- <div class="cong-contanier">
+      <div class="cong">
+        Congratulation
+        <p>YOU COMPLETE ALL TASKS</p>
+        <button class="close-cong">
+          <i class="ri-close-circle-line"></i>
+        </button>
+      </div>
+    </div> -->
+
+    <!-- add task scroll btn -->
+    <button class="scroll-add-btn"><i class="ri-add-line"></i></button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
